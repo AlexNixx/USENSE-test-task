@@ -68,12 +68,9 @@
 
     .button {
       position: relative;
-      font-family: inherit;
       font-weight: 500;
-      font-size: 18px;
-      letter-spacing: 0.05em;
+      font-size: 1.2rem;
       border-radius: 1.5rem;
-      border: none;
       background: linear-gradient(to right, #8e2de2, #4a00e0);
       color: ghostwhite;
       overflow: hidden;
@@ -84,7 +81,7 @@
         transition: color 0.4s;
         display: inline-flex;
         align-items: center;
-        padding: 0.8em 1.2em 0.8em 1.05em;
+        padding: 0.8rem 1.2rem 0.8rem 1.05rem;
       }
 
       &::before,
