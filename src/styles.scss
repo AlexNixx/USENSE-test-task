@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   border: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 *,
@@ -31,8 +32,7 @@ html,
 body {
   font-size: 100%;
   line-height: 1;
-  font-size: var(--fs-sm);
-  color: var(--color-text);
+  font-size: 16px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
