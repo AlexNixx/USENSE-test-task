@@ -1,23 +1,49 @@
 <div class="container">
   <h1 class="title">User Registration</h1>
-  <form class="form">
-    <input type="email" name="email" class="input" placeholder="Email" />
+  <form class="form" #register="ngForm" (ngSubmit)="submit(register)">
+    <input
+      type="email"
+      name="email"
+      class="input"
+      placeholder="Email"
+      ngModel
+    />
 
     <div class="password-group">
       <input
-        type="password"
+        type="text"
         name="password"
         class="input"
         placeholder="Password"
+        (input)="checkPasswordStrength($event)"
+        ngModel
       />
-      <div class="bars">
+      <div
+        class="bars"
+        [ngClass]="{
+          red: passwordStrength === 1,
+          easy: passwordStrength === 2,
+          medium: passwordStrength === 3,
+          strong: passwordStrength === 4
+        }"
+      >
         <div class="indicator"></div>
         <div class="indicator"></div>
         <div class="indicator"></div>
-        <div class="strength"></div>
+        <div class="strength">
+          {{
+            passwordStrength === 2
+              ? "Easy"
+              : passwordStrength === 3
+              ? "Medium"
+              : passwordStrength === 4
+              ? "Strong"
+              : ""
+          }}
+        </div>
       </div>
     </div>
 
-    <button class="button"><span>Sign Up</span></button>
+    <button class="button" type="submit"><span>Sign Up</span></button>
   </form>
 </div>
